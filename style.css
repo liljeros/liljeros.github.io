@@ -54,6 +54,8 @@ p {
     letter-spacing: 1px;
     font-weight: 600;
     color: #fff;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .container a {
@@ -71,6 +73,12 @@ p {
     left:50%;
     transform: translateX(-50%);
 
+}
+
+@media screen and (min-width: 600px){
+ p{
+    width: 100%;
+    }
 }
 
 
