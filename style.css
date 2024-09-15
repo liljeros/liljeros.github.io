@@ -370,11 +370,11 @@ body {
     width: 100%;
     height: 100%;
     border: 3px dashed #F7F5F0;
-    animation: rotate 60s linear infinite;
+    animation: rotate 30s linear infinite;
 }
 
 .aesthetics .ring {
-    animation: rotate-counter 60s linear infinite;
+    animation: rotate-counter 30s linear infinite;
 }
 
 .text {
@@ -502,11 +502,11 @@ body {
 
 .ptp-wrap .line{
     display:block;
-    height: 3px;
+    height: 4px;
     width: 80%;
     background-color: var(--main-dark);
     position: absolute;
-    top:3px;
+    top:2px;
     left:24px;
 }
 
@@ -535,6 +535,7 @@ body {
 
 .service-container.active:after{
     border-bottom-style: solid;
+    border-width: 4px;
 }
 .service-container h3{
     font-weight: normal;
@@ -580,7 +581,7 @@ body {
 }
 
 .service-container h3:hover{
-    color: rgba(66, 66, 66, .4);
+    text-decoration: underline;
 }
 
 
