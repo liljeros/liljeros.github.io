@@ -519,6 +519,7 @@ body {
 .service-container{
     position: relative;
     width: 100%;
+    margin: 0 auto;
 }
 .service-container:after{
     content: '';
@@ -669,8 +670,25 @@ body {
 }
 
 .footer-logo-wrap img{
-    margin: 0 auto;
+    margin: 0 auto 4rem;
   
+}
+
+.footer-logo-wrap a, .footer-logo-wrap p{
+    text-decoration: none;
+    color: var(--main-light);
+    font-size:.75rem;
+    margin: 0 auto ;
+    display: block;
+    text-align: center;
+}
+
+.footer-logo-wrap a{
+    margin-bottom: 4rem;
+}
+
+.footer-logo-wrap a:hover{
+    text-decoration: underline;
 }
 
 .main-footer span{
@@ -678,7 +696,7 @@ body {
     background-color: var(--main-light);
     text-align: center;
     display: inline-block;
-    padding: .25em 0;
+    padding: 2em 0 2rem;
     font-size: .75em;
 }
 
@@ -789,6 +807,10 @@ body {
         width: 50%;
         display: inline-block;
 
+    }
+
+    .service-container, .headed-content p{
+        max-width: 800px;
     }
 }
 
