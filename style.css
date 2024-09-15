@@ -565,11 +565,18 @@ body {
     transform: rotate(90deg);
 }
 
-.service-container.active h3:before, .service-container.active h3:after{
+.service-container.active h3:before{
     transform: rotate(0deg);
     width: 8px;
     height: 8px;
     border-radius: 4px;
+    margin-top: -2px;
+}
+
+.service-container.active h3:after{
+    width: 20px;
+    height: 4px;
+    right: 12px;
 }
 
 .service-container h3:hover{
