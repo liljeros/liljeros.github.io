@@ -3,418 +3,539 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liljeros & Co.</title>
-    <link rel="stylesheet" href="style.css?ver=7">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <meta name="description" content="Helping you design your business, develop your brand, grow your product and build your team.">
+    <title>Liljeros & Co - Investing, Advising. Building</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Liljeros & Co. - Stockholm based investor, advisor and builder of companies, products and brands.">
+    <meta name="keywords" content="Liljeros & Co, strategic consulting, digital solutions, brand development, business consulting, investment advisory, company building, startup consulting, business strategy">
+    <meta name="author" content="Liljeros & Co">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://www.liljeros.co/">
-
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#222222">
+    <meta name="msapplication-TileColor" content="#222222">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Liljeros & Co">
+    <meta name="application-name" content="Liljeros & Co">
+    <meta name="msapplication-TileImage" content="resources/images/touch_icon.png">
+    
+    <!-- Security Meta Tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://liljeros.co">
+    
+    <!-- Favicon and Touch Icons -->
+    <link rel="icon" type="image/png" href="resources/images/favicon.png">
+    <link rel="apple-touch-icon" href="resources/images/touch_icon.png">
+    
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Liljeros & Co." />
-    <meta property="og:description" content="Helping you design your business, develop your brand, grow your product and build your team." />
-    <meta property="og:image" content="https://www.liljeros.co/img/social-og.jpg" />
-    <meta property="og:url" content="https://www.liljeros.co/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Liljeros & Co." />
-    <meta property="og:locale" content="en_US" />
-
+    <meta property="og:title" content="Liljeros & Co.">
+    <meta property="og:description" content="Liljeros & Co. - Stockholm based investor, advisor and builder of companies, products and brands.">
+    <meta property="og:image" content="https://liljeros.co/resources/images/og_image.png">
+    <meta property="og:url" content="https://liljeros.co">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Liljeros & Co">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Liljeros & Co.">
-    <meta name="twitter:description" content="Helping you design your business, develop your brand, grow your product and build your team.">
-    <meta name="twitter:image" content="https://www.liljeros.co/img/social-x.jpg">
+    <meta name="twitter:description" content="Liljeros & Co. - Stockholm based investor, advisor and builder of companies, products and brands.">
+    <meta name="twitter:image" content="https://liljeros.co/resources/images/og_image.png">
+    <meta name="twitter:site" content="@r_liljeros">
+    <meta name="twitter:creator" content="@r_liljeros">
+    
+    <style>
+        /* Custom Fonts */
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('resources/fonts/26b14ae67908d9ca-s.p.woff2') format('woff2'),
+                 url('resources/fonts/37946489921eb11f-s.p.woff') format('woff');
+            font-weight: 300;
+            font-style: normal;
+        }
 
-    <!-- Structured Data -->
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('resources/fonts/6d2f0e5bae792e8d-s.p.woff2') format('woff2'),
+                 url('resources/fonts/398719be42c922f5-s.p.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'CustomFont';
+            src: url('resources/fonts/d6cc3f36a2fd46a7-s.p.woff2') format('woff2'),
+                 url('resources/fonts/bc94f7c86b99fb6c-s.p.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'CustomFont', Arial, sans-serif;
+            font-size:16px;
+            line-height: 1.6;
+            font-weight: 500;
+            transition: background-color 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            background: #f5f4f3;
+        }
+
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: -1;
+        }
+
+        .background-overlay.active {
+            opacity: 1;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+            transition: color 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        body.brand-hover .tagline,
+        body.brand-hover .brands-list a,
+        body.brand-hover .contact-links a {
+            transition: color 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        body.brand-hover .logo {
+            transition: filter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Logo centering */
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            min-height: 100svh;
+            min-height: 100dvh;
+            width: 100%;
+        }
+
+        .logo {
+            max-width: 200px;
+            width: 100%;
+        }
+
+        .logo path {
+            fill: #222222;
+        }
+
+        .brands-list {
+            margin-top: 40px;
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            padding: 0 2rem;
+        }
+
+        .brands-list a {
+            display: inline-block;
+            margin: 0 15px 10px 15px;
+            color: #222222;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .brands-list a:hover {
+            color: #666666;
+        }
+
+        .contact-links {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .contact-links a {
+            color: #222222;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            color: #666666;
+        }
+
+        .tagline {
+            position: fixed;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #222222;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 10px;
+            height: 10px;
+            background: #222222;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .theme-toggle.random-active {
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+            transform: scale(1.2);
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.5);
+        }
+
+        /* Dark theme styles */
+        body.dark-theme {
+            background: #1d1c1a;
+        }
+
+        body.dark-theme .tagline,
+        body.dark-theme .brands-list a,
+        body.dark-theme .contact-links a {
+            color: #ffffff;
+        }
+
+        body.dark-theme .brands-list a:hover,
+        body.dark-theme .contact-links a:hover {
+            color: #cccccc;
+        }
+
+        body.dark-theme .logo {
+            filter: brightness(0) invert(1);
+        }
+
+        body.dark-theme .theme-toggle {
+            background: #ffffff;
+        }
+
+        /* Random vibrant color themes */
+        body.random-color {
+            transition: background-color 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        body.random-color .tagline,
+        body.random-color .brands-list a,
+        body.random-color .contact-links a {
+            color: inherit;
+            transition: color 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        body.random-color .brands-list a:hover,
+        body.random-color .contact-links a:hover {
+            opacity: 0.8;
+        }
+
+        body.random-color .logo {
+            transition: filter 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        body.random-color .theme-toggle {
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-picture {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1000;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        /* Mobile sizing adjustments */
+        @media (max-width: 600px) {
+            body { font-size: 14px; }
+            .tagline { top: 20px; font-size: 14px; }
+            .logo { max-width: 160px; }
+            .brands-list { margin-top: 28px; padding: 0 1rem; }
+            .brands-list a { font-size: 14px; margin: 0 10px 8px 10px; }
+            .contact-links { bottom: 8px; left: 16px; gap: 14px; }
+            .contact-links a { font-size: 14px; }
+            .profile-picture { top: 16px; right: 16px; width: 32px; height: 32px; }
+            .theme-toggle { bottom: 16px; right: 16px; width: 8px; height: 8px; }
+        }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HED4FWXH2C"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-HED4FWXH2C');
+    </script>
+    
+    <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "Liljeros & Co.",
-      "url": "https://www.liljeros.co/",
-      "logo": "https://www.liljeros.co/img/liljeros-long-logo-black.svg",
+      "name": "Liljeros & Co",
+      "url": "https://liljeros.co",
+      "logo": "https://liljeros.co/resources/logos/liljeros-co-logo.svg",
+      "description": "Liljeros & Co is a forward-thinking company specializing in strategic consulting, digital solutions, and brand development. We help businesses thrive through innovation and proven methodologies.",
+      "slogan": "Investing. Advising. Building.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "SE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "email": "hello@liljeros.co"
+      },
       "sameAs": [
-        "https://www.facebook.com/liljerosco/",
-        "https://www.linkedin.com/company/liljerosco",
-        "https://x.com/liljerosco"
+        "https://twitter.com/liljeros_co",
+        "https://linkedin.com/company/liljeros-co"
       ],
-      "description": "Helping you design your business, develop your brand, grow your product and build your team."
+      "foundingDate": "2024",
+      "areaServed": "Worldwide",
+      "serviceType": [
+        "Strategic Consulting",
+        "Digital Solutions", 
+        "Brand Development",
+        "Investment Advisory"
+      ]
     }
     </script>
-</head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HED4FWXH2C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HED4FWXH2C');
-</script>
-<body>
-    <div class="video-background">
-        <video autoplay muted loop playsinline preload="auto" id="background-video">
-            <source src="img/liljeros-video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-<section id="OffCanvasMenu" class="off-canvas-menu">
-    <div id="CloseOffCanvas"></div>
-    <nav class="off-canvas-nav">
-        <a class="active" href="#">home</a>
-        <a class="" href="#">branding</a>
-        <a class="" href="#">business</a>
-        <a class="" href="#">product</a>
-        <a class="" href="#">writing</a>
-        <a class="" href="#">sessions</a>
-        <a class="" href="#">contact</a>
-    </nav>
-    <a class="off-canvas-logo" href="/"><img src="img/liljeros-long-logo-black.svg" alt="Liljeros and Company" class="logo"></a>
-</section>
-<section class="start-wrap">
-        <div id="HamburgerMenu"></div>
-        <nav class=" col-container main-nav">
-            <div class="main-nav-left">
-                <a href="/branding">Branding</a>
-                <a href="/product">Product</a>
-                <a href="/commerce">Commerce</a>
-             </div>
-            <a href="/" class="nav-logo"><img src="img/liljeros-long-logo-white.svg" alt="Logo" class="logo"></a>
-            <div class="main-nav-right">
-                <a href="/sessions">Sessions</a>
-                <a href="/writing">Writing</a>
-                <a href="/contact">Contact</a>
-            </div>
-        </nav>
+  </head>
+ <body>
+     <script>
+         (function(){
+             var m = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+             var h = new Date().getHours();
+             if (m || h < 8 || h >= 18) {
+                 document.body.classList.add('dark-theme');
+             }
+         })();
+     </script>
+    <header>
+        <div class="tagline">Investing. Advising. Building.</div>
+        <div class="profile-picture" onclick="handleProfileClick()" role="button" tabindex="0" aria-label="Profile Picture">
+            <img src="resources/images/pfp.png" alt="Profile Picture">
+        </div>
     </header>
-    <div class="col-container flex-center"><h1 class="start-message">develop your brand</h1></div>
-    <div class="col-container flex-center"><a href="#services" class="smooth-scroll start-link">All services</a></div>
-</section>
-<section class="translate-wrap">
-    <div class="translate-content">
-        <h2>translating between the world of art, technology and business.</h2>
-        <div class="diagram-container">
-            <img src="img/lilj-shield.png" class="lilj-shield" alt="Liljeros & Company Logo - Shield">
-            <div class="container technology">
-                <div class="ring"></div>
-                <div class="text">technology</div>
-            </div>
-            <div class="container aesthetics">
-                <div class="ring"></div>
-                <div class="text">aesthetics</div>
-            </div>
-            <div class="container business">
-                <div class="ring"></div>
-                <div class="text">business</div>
-            </div>
-        </div>
-        <p>The guiding belief is that real value creation requires a business to solve highly technical problems, package it in a beautiful way and deliver it with high efficiency.</p>
-        <a href="mailto:hello@liljeros.co?subject=Hello">let's talk</a>
-    </div>
-</section>
-<section class="headed-wrap">
-    <div class="headed-content">
-        <h2>where are you headed?</h2>
-        <div class="ptp-wrap">
-            <span class="dot left"></span>
-            <span class="line"></span>
-            <span class="dot rigth"></span>
-        </div>
-        <p>the assignment is to help you figure out what you're aiming at and then make sure you get there in the best possible way. creating value for your customers, your business and society.</p>
-        <a href="mailto:hello@liljeros.co?subject=Hello">get in touch</a>
 
-        
+    <main>
+        <div class="logo-container">
+            <img src="resources/logos/liljeros-co-logo.svg" alt="Liljeros & Co Logo" class="logo">
+            
+            <nav class="brands-list" role="navigation" aria-label="Portfolio Companies">
+                <!-- <a href="#daft-capital">Daft Capital</a> -->
+                <a target="_blank" rel="nofollow" href="https://elvyenergy.com" aria-label="Visit Elvy Energy">Elvy</a>
+                <a target="_blank" rel="nofollow" href="https://www.lovable.dev" aria-label="Visit Lovable">Lovable</a>
+                <a target="_blank" rel="nofollow" href="https://washere.io" aria-label="Visit WasHere">WasHere</a>
+                <a target="_blank" rel="nofollow" href="https://www.yllw.com" aria-label="Visit YLLW">YLLW</a>
+                <a target="_blank" rel="nofollow" href="https://www.no-ga.com" aria-label="Visit Nordiska Galleriet">Nordiska Galleriet</a>
+                <a target="_blank" rel="nofollow" href="https://www.lannamobler.se" aria-label="Visit Länna Möbler">Länna Möbler</a>
+                <a target="_blank" rel="nofollow" href="https://www.dustydeco.com" aria-label="Visit Dusty Deco">Dusty Deco</a>
+                <a target="_blank" rel="nofollow" href="https://www.thekids.eu" aria-label="Visit The Kids">The Kids</a>
+                <a target="_blank" rel="nofollow" href="https://www.bangerhead.se" aria-label="Visit Bangerhead">Bangerhead</a>
+                <!-- <a href="#motiv">Motiv</a> -->
+            </nav>
+        </div>
+    </main>
 
-        <div class="services-wrapper" id="services">
-            <h2>the help you need<br>to get there</h2>
-            <div class="service-container">
-                <h3 class="service-header">define your strategy</h3>
-                <div class="service-details">
-                    <p>where it all starts. Who is your customer? how do you help them? Why is it important? How will the future look? What principles do you follow to succeed? A lot of questions, we figure out your answers together.</p>
-                        <ul>
-                            <li>workshop facilitation</li>
-                            <li>strategic advisory</li>
-                            <li>customer research</li>
-                            <li>market analysis</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="service-container" >
-                <h3 class="service-header">build your brand</h3>
-                <div class="service-details">
-                    <p>Your brand is the sum of everything you do. With an iconic visual and written language you will make it easy for customers to remember, follow and admire you. </p>
-                        <ul>
-                            <li>brand strategy</li>
-                            <li>naming & logo design</li>
-                            <li>graphic design & copywriting</li>
-                            <li>asset production</li>
-                            <li>brand marketing</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="service-container" >
-                <h3 class="service-header">develop your product</h3>
-                <div class="service-details">
-                    <p>What are you selling? Your product is the core of why you exist. Whether it's a service, physical item, or software product we define and develop it to be indispensable for your customers.</p>
-                        <ul>
-                            <li>product strategy</li>
-                            <li>product management</li>
-                            <li>service design</li>
-                            <li>ux and ui design</li>
-                            <li>software development</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="service-container" >
-                <h3 class="service-header">enhance your digital presence</h3>
-                <div class="service-details">
-                    <p>Your website and social media accounts are shopping windows for your customers. Let's make the most of it and ensure they see what you have to offer in the best way possible.</p>
-                        <ul>
-                            <li>web design</li>
-                            <li>web development</li>
-                            <li>content production</li>
-                            <li>Social Media strategy</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="service-container" >
-                <h3 class="service-header">Grow your sales</h3>
-                <div class="service-details">
-                    <p>How do you reach your customers? We figure out where they are, how to reach them, what to say and how to invest to enable high sustainable growth.</p>
-                        <ul>
-                            <li>creative direction</li>
-                            <li>growth hacking</li>
-                            <li>performance marketing</li>
-                            <li>traditional advertising & pr</li>
-                            <li>budgeting and analytics</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="service-container" >
-                <h3 class="service-header">strengthen your team</h3>
-                <div class="service-details">
-                    <p>The performance of your team is the output of your company. Building a culture of high trust and high agency is fundamental to your success. Together we work to get you there.</p>
-                        <ul>
-                            <li>Culture workshops</li>
-                            <li>Goal definition</li>
-                            <li>Team development</li>
-                            <li>Career development</li>
-                        </ul>
-                </div>
-            </div>
-            <div class="service-container" >
-                <h3 class="service-header">grow your commerce business</h3>
-                <div class="service-details">
-                    <p>From lead to delivery your commerce business is an operational machine that has to work without friction. From brick-and-mortar stores and e-commerce to warehousing and procurement we work to remove any obstacle.</p>
-                        <ul>
-                            <li>Commerce strategy</li>
-                            <li>E-commerce design and development</li>
-                            <li>Customer experience design</li>
-                            <li>optimization of operations</li>
-                            <li>ERP, CRM, PIM implemenations</li>
-                        </ul>
-                </div>
-            </div>
+    <footer>
+        <div class="contact-links" role="navigation" aria-label="Contact Information">
+            <a href="mailto:hello@liljeros.co?subject=Hello" rel="nofollow" target="_blank" aria-label="Reach out to us">Reach out</a>
+            <a href="https://x.com/rliljeros" rel="nofollow" target="_blank" aria-label="Follow on X (Twitter)">X</a>
+            <a href="https://www.linkedin.com/in/rickard-liljeros/" rel="nofollow" target="_blank" aria-label="Connect on LinkedIn">LinkedIn</a>
         </div>
 
-    </div>
+        <div class="theme-toggle" onclick="toggleTheme()" role="button" tabindex="0" aria-label="Toggle dark/light theme"></div>
+    </footer>
 
-</section>
-
-<section class="work-wrap">
-    <div class="work-content">
-        <h2>work history</h2>
-        <ul>
-            <li><a href="https://www.washere.io" target="_blank">washere</a></li>
-            <li><a href="https://www.no-ga.com" rel="nofollow" target="_blank">nordiska galleriet</a></li>
-            <li><a href="https://www.yllw.com" rel="nofollow"  target="_blank">yllw</a></li>
-            <li><a href="https://www.lannamobler.se" rel="nofollow"  target="_blank">länna</a></li>
-            <li><a href="https://www.thekids.eu" rel="nofollow"  target="_blank">the kids</a></li>
-            <li>spotify business</li>
-            <li>saatchi & saatchi</li>
-            <li>the absolut company</li>
-            <li><a href="https://www.hyperisland.com" rel="nofollow"  target="_blank">hyper island</a></li>
-            <li><a href="https://www.bangerhead.com" rel="nofollow"  target="_blank">bangerhead</a></li>
-        </ul>
-    </div>
-
-</section>
-<footer class="main-footer">
-    <div class="footer-logo-wrap">
-        <img src="img/liljeros-long-logo-white.svg" alt="Liljeros and Company" class="logo">
-        <p>stockholm, sweden</p>
-        <a href="mailto:hello@liljeros.co?subject=Hello">hello@liljeros.co</a>
-        
-    </div>
-    <span>copyright © 2024</span>
-</footer>
     <script>
-        // Ensure video plays on mobile after user interaction
-        document.addEventListener('click', function() {
-            var video = document.getElementById('background-video');
-            if (video.paused) {
-                video.play();
-            }
-        });
+        // Theme management variables
+        let themeSwitchCount = 0;
+        let isRandomColorActive = false;
+        let lastRandomColorIndex = -1;
+        
+        // Color palette with predefined text colors for optimal contrast
+        const vibrantColors = [
+            { color: '#ffdd00', textColor: 'black' }, // YLLW/Nordiska Galleriet
+            { color: '#ff5000', textColor: 'black' }, // WasHere
+            { color: '#0B1E3D', textColor: 'white' }, // Elvy
+            { color: '#ff0000', textColor: 'black' }, // Lovable
+            { color: '#002fa7', textColor: 'white' }, // The Kids
+            { color: '#7f00ff', textColor: 'white' }, // Bangerhead
+            { color: '#492425', textColor: 'white' }, // Dusty Deco
+            { color: '#FFFFFF', textColor: 'black' }, // Länna
+        ];
 
-        /*
-        document.addEventListener('DOMContentLoaded', function () {
-            const hamburger = document.getElementById('HamburgerMenu');
-            const offCanvasMenu = document.getElementById('OffCanvasMenu');
-            const closeBtn = document.getElementById('CloseOffCanvas');
+        // Function to determine if text should be black or white based on background color
+        // Uses luminance calculation for optimal contrast
+        function getTextColor(backgroundColor) {
+            // Convert hex to RGB
+            const hex = backgroundColor.replace('#', '');
+            const r = parseInt(hex.substr(0, 2), 16);
+            const g = parseInt(hex.substr(2, 2), 16);
+            const b = parseInt(hex.substr(4, 2), 16);
             
-            // Toggle the menu on hamburger click
-            hamburger.addEventListener('click', function () {
-                offCanvasMenu.classList.add('open');
-                hamburger.classList.add('open');
-            });
-
-            // Close the menu on close button click
-            closeBtn.addEventListener('click', function () {
-                offCanvasMenu.classList.remove('open');
-                hamburger.classList.remove('open');
-            });
-
-            // Prevent scrolling when menu is open
-            offCanvasMenu.addEventListener('transitionend', function () {
-                if (offCanvasMenu.classList.contains('open')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = '';
-                }
-            });
-        });*/
-
-        document.addEventListener('DOMContentLoaded', function () {
-    const headers = document.getElementsByClassName('service-header');
-
-    for (let i = 0; i < headers.length; i++) {
-        headers[i].addEventListener('click', function () {
-            const serviceDetail = this.nextElementSibling;
-            const isCurrentlyOpen = window.getComputedStyle(serviceDetail).display === 'block';
-
-            // Close all service details
-            const details = document.getElementsByClassName('service-details');
-            for (let j = 0; j < details.length; j++) {
-                details[j].style.display = 'none';
-                details[j].parentNode.classList.remove('active');
-            }
-
-            // Toggle the clicked section based on its previous state
-            if (!isCurrentlyOpen) {
-                serviceDetail.style.display = 'block';
-                this.parentNode.classList.add('active');
-            }
-        });
-    }
-});
-
-
-// Smooth scrolling 
-
-document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-
-    </script>
-
-<script>
-    class TextScramble {
-        constructor(el) {
-            this.el = el;
-            this.chars = '–';
-            this.update = this.update.bind(this);
+            // Calculate luminance
+            const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+            
+            // Return black for light backgrounds, white for dark backgrounds
+            return luminance > 0.5 ? 'black' : 'white';
         }
 
-        setText(newText) {
-            const oldText = this.el.innerText;
-            const length = Math.max(oldText.length, newText.length);
-            const promise = new Promise((resolve) => this.resolve = resolve);
-            this.queue = [];
+        // Main theme toggle function
+        // Handles: light/dark theme, random color activation, and cleanup
+        function toggleTheme() {
+            const body = document.body;
+            themeSwitchCount++;
             
-            for (let i = 0; i < length; i++) {
-                const from = oldText[i] || '';
-                const to = newText[i] || '';
-                const start = Math.floor(Math.random() * 40);
-                const end = start + Math.floor(Math.random() * 40);
-                this.queue.push({ from, to, start, end });
-            }
-            
-            cancelAnimationFrame(this.frameRequest);
-            this.frame = 0;
-            this.update();
-            return promise;
-        }
-
-        update() {
-            let output = '';
-            let complete = 0;
-            
-            for (let i = 0, n = this.queue.length; i < n; i++) {
-                let { from, to, start, end, char } = this.queue[i];
+            // If random color is active, clear it and return to light theme
+            if (isRandomColorActive) {
+                body.classList.remove('random-color');
+                body.style.backgroundColor = '';
+                body.style.color = '';
                 
-                if (this.frame >= end) {
-                    complete++;
-                    output += to;
-                } else if (this.frame >= start) {
-                    if (!char || Math.random() < 0.28) {
-                        char = this.randomChar();
-                        this.queue[i].char = char;
+                // Reset logo filter
+                const logo = document.querySelector('.logo');
+                if (logo) {
+                    logo.style.filter = '';
+                }
+                
+                // Reset theme toggle background
+                const themeToggle = document.querySelector('.theme-toggle');
+                if (themeToggle) {
+                    themeToggle.style.backgroundColor = '';
+                    themeToggle.classList.remove('random-active');
+                }
+                
+                isRandomColorActive = false;
+                return;
+            }
+            
+            // Check if we should trigger random color (after first 2 switches)
+            if (themeSwitchCount > 2) {
+                // 15% chance of random color
+                if (Math.random() < 0.15) {
+                    // Ensure we don't get the same color twice in a row
+                    let randomIndex;
+                    do {
+                        randomIndex = Math.floor(Math.random() * vibrantColors.length);
+                    } while (randomIndex === lastRandomColorIndex && vibrantColors.length > 1);
+                    
+                    lastRandomColorIndex = randomIndex;
+                    const randomColorObj = vibrantColors[randomIndex];
+                    
+                    // Remove existing theme classes
+                    body.classList.remove('dark-theme');
+                    
+                    // Add random color class and set background
+                    body.classList.add('random-color');
+                    body.style.backgroundColor = randomColorObj.color;
+                    
+                    // Set text color based on background brightness
+                    const textColor = randomColorObj.textColor || getTextColor(randomColorObj.color);
+                    body.style.color = textColor;
+                    
+                    // Set logo filter based on text color
+                    const logo = document.querySelector('.logo');
+                    if (logo) {
+                        if (textColor === 'white') {
+                            logo.style.filter = 'brightness(0) invert(1)';
+                        } else {
+                            logo.style.filter = 'none';
+                        }
                     }
-                    output += `<span class="dud">${char}</span>`;
-                } else {
-                    output += from;
+                    
+                    // Set theme toggle background color
+                    const themeToggle = document.querySelector('.theme-toggle');
+                    if (themeToggle) {
+                        themeToggle.style.backgroundColor = textColor;
+                        themeToggle.classList.add('random-active');
+                    }
+                    
+                    // Mark random color as active
+                    isRandomColorActive = true;
+                    
+                    return;
                 }
             }
             
-            this.el.innerHTML = output;
-            
-            if (complete === this.queue.length) {
-                this.resolve();
-            } else {
-                this.frameRequest = requestAnimationFrame(this.update);
-                this.frame++;
-            }
+            // Normal theme toggle
+            body.classList.toggle('dark-theme');
         }
 
-        randomChar() {
-            return this.chars[Math.floor(Math.random() * this.chars.length)];
+        function handleProfileClick() {
+            // Profile picture click handler - functionality to be added later
+            console.log('Profile picture clicked!');
         }
-    }
-
-    const phrases = [
-        'design your business',
-        'grow your product',
-        'develop your brand',
-        'build your team'
-    ];
-
-    const el = document.querySelector('.start-message');
-    const fx = new TextScramble(el);
-
-    let counter = 0;
-    const next = () => {
-        fx.setText(phrases[counter]).then(() => {
-            setTimeout(next, 2000);
-        });
-        counter = (counter + 1) % phrases.length;
-    };
-
-    next();
-</script>
+    </script>
 </body>
-</html>
+</html> 
